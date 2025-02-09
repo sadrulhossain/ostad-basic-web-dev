@@ -1,0 +1,74 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    background-color: #222831 !important;
+    color: #EEEEEE;
+    font-family: 'Poppins';
+}
+
+.text-white {
+    color: #EEEEEE !important;
+}
+.text-green-seagreen {
+    color: #00ADB5 !important;
+}
+.text-grey {
+    color: #393E46 !important;
+}
+
+.btn.green-seagreen {
+    background-color: #00ADB5 !important;
+    border: 1px solid #00ADB5 !important;
+    color: #EEEEEE !important;
+}
+.btn.grey {
+    background-color: #393E46 !important;
+    border: 1px solid #393E46 !important;
+    color: #EEEEEE !important;
+}
+
+.title-logo {
+    font-family: "Oswald";
+    font-size: 20px;
+    font-weight: 700;
+}
+.border-bottom-1-grey {
+    border-bottom: 1px solid #393E46 !important;
+}
+.top-bar {
+    padding: 30px 70px;
+}
+.nav .nav-item>.nav-link {
+    font-size: 14px;
+}
+
+.home-content {
+    width: 85%;
+    margin: 5% auto;
+}
+.content-image {
+    width: 80%;
+    height: auto;
+}
+.home-intro-content {
+    width: 100%;
+    margin: 10% 20% 5%;
+    line-height: 1;
+}
+.home-btn-content {
+    width: 100%;
+    margin: 0 20% 20%;
+}
+.home-intro-content>span {
+    font-size: 60px !important;
+    text-transform: uppercase !important;
+    font-weight: bolder !important;
+}
+.home-btn-content>.btn {
+    font-size: 14px !important;
+    border-radius: 1.25rem !important;
+    text-shadow: 2px 2px #22283175 !important;
+    padding: 5px 20px !important;
+}
