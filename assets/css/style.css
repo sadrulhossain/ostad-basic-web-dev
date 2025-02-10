@@ -48,9 +48,16 @@ body {
     width: 85%;
     margin: 5% auto;
 }
+.home-content-image {
+    background-image: url("../images/home-image-bg.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: top;
+}
 .content-image {
     width: 80%;
     height: auto;
+    margin-top: 40%;
 }
 .home-intro-content {
     width: 100%;
@@ -71,4 +78,41 @@ body {
     border-radius: 1.25rem !important;
     text-shadow: 2px 2px #22283175 !important;
     padding: 5px 20px !important;
+}
+.about-me-content {
+    width: 85%;
+    margin: 10% auto;
+}
+.about-me-content-image {
+    background-image: url("../images/about-me-image-bg.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.about-me-content .content-image {
+    width: 50%;
+    height: auto;
+    margin-top: 20%;
+}
+.about-me-heading-content, .about-me-body-content {
+    width: 90%;
+}
+.about-me-heading-content {
+    margin: 10% 0 0;
+    line-height: 1;
+}
+.about-me-body-content {
+    margin: 5% 0 0;
+    line-height: 1.2;
+}
+
+.about-me-heading-content>span {
+    font-size: 40px !important;
+    font-weight: bolder !important;
+}
+.about-me-body-content>span {
+    font-size: 14px !important;
+}
+.home-next-page {
+    margin: -10% 0 0;
 }
