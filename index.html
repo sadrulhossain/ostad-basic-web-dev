@@ -2,8 +2,9 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ostad Assignment | Landing Page Design</title>
-    <link rel="shortcut icon" href="assets/images/home-image-bg.png" type="image/x-icon">
+    <link rel="shortcut icon" href="assets/images/landing-page.ico" type="image/x-icon">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins|Oswald">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
           integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
@@ -14,83 +15,166 @@
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
-<!--    Home-->
-    <div id="home">
-        <!--Top Bar-->
-        <div class="top-bar border-bottom-1-grey">
-            <div class="row">
-                <div class="col-12 col-sm-4 col-md-3 col-lg-3">
-                    <span class="title-logo">SaulDesign</span>
-                </div>
-                <div class="col-12 col-sm-8 col-md-9 col-lg-9">
-                    <ul class="menu nav justify-content-end">
-                        <li class="nav-item">
-                            <a class="nav-link text-white active" aria-current="page" href="#home">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-white" href="#aboutMe">About Me</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-white" href="#contact">Contact</a>
-                        </li>
-                    </ul>
-                </div>
+<!--Top Bar-->
+<header class="sticky-top py-3 top-bar border-bottom-1-grey">
+    <div class="container">
+        <nav class="navbar navbar-expand-lg navbar-dark">
+            <a class="navbar-brand text-white text-decoration-none" href="#"><span class="title-logo">SaulDesign</span></a>
+            <button class="navbar-toggler text-white" type="button" data-bs-toggle="collapse" data-bs-target="#menubarNav" aria-controls="menubarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="menubarNav">
+                <ul class="menu navbar-nav">
+                    <li class="nav-item mx-3">
+                        <a class="nav-link text-white active" aria-current="page" href="#home">Home</a>
+                    </li>
+                    <li class="nav-item mx-3">
+                        <a class="nav-link text-white" href="#aboutMe">About Me</a>
+                    </li>
+                    <li class="nav-item mx-3">
+                        <a class="nav-link text-white" href="#recentWork">Recent Works</a>
+                    </li>
+                    <li class="nav-item mx-3">
+                        <a class="nav-link text-white" href="#contact">Contact</a>
+                    </li>
+                </ul>
             </div>
-        </div>
-        <div class="home-content">
-            <div class="row">
-                <div class="col-12 col-sm-7 col-md-8 col-lg-8">
-                    <div class="home-intro-content">
-                        <span class="text-white">Creative UI</span><br>
-                        <span class="text-green-seagreen">Designer</span>
-                    </div>
-                    <div class="home-btn-content">
-                        <a class="btn btn-sm green-seagreen fw-bold">Hire me</a>
-                        <a class="btn btn-sm grey fw-bold">Download CV <i class="fa fa-download"></i></a>
-                    </div>
-                    
-                </div>
-                <div class="col-12 col-sm-5 col-md-4 col-lg-4 home-content-image">
-                    <img src="assets/images/welcome.png"  alt="welcome" class="content-image">
-                </div>
-                <div class="col-12 col-sm-7 col-md-8 col-lg-8">
-                    <div class="home-next-page text-center">
-                        <a class="btn btn-lg grey" href="#aboutMe"><i class="fa fa-arrow-down-long"></i></a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!--Top Bar-->
+        </nav>
     </div>
+</header>
 <!--    Home-->
-<!--    About Me-->
-    <div id="aboutMe">
-        <div class="about-me-content">
-            <div class="row">
-                <div class="col-12 col-sm-6 col-md-5 col-lg-5">
-                    <div class="about-me-heading-content">
-                        <span class="text-white">About</span>&nbsp;
-                        <span class="text-green-seagreen">me</span>
-                    </div>
-                    <div class="about-me-body-content">
-                        <span class="text-white">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus eget justo eros. Sed ultricies nisi bibendum libero congue, quis convallis turpis venenatis. In lectus lectus, accumsan vel interdum at, ultricies egestas enim. Duis at ex commodo, congue tortor ac, congue leo. Nunc sagittis scelerisque feugiat. Duis ut cursus enim, eu vehicula enim. Curabitur aliquet turpis ut quam lacinia fringilla. Nullam et purus finibus, accumsan libero id, sodales metus. Nunc interdum lacus non ipsum laoreet elementum. Vivamus vitae urna id risus luctus laoreet. Proin rutrum velit quam, eget porttitor libero ultrices nec. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Sed sed elementum nulla. Vivamus id commodo purus...
-                        </span>
-                        <a class="text-decoration-none text-white fw-bold">Read more</a>
-                    </div>
-                </div>
-                <div class="col-12 col-sm-6 col-md-7 col-lg-7 about-me-content-image align-middle text-center">
-                    <img src="assets/images/about-me.png"  alt="about-me" class="content-image">
-                </div>
+<section class="hero-section text-white py-5" id="home">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-12 col-sm-6 col-md-4 offset-md-2 col-lg-4 offset-lg-2">
+                <h1 class="display-4 text-white fw-bolder">CREATIVE UI</h1>
+                <h1 class="display-4 text-green-seagreen fw-bolder">DESIGNER</h1>
+                <a class="btn btn-sm green-seagreen fw-bold home-btn-content">Hire me</a>
+                <a class="btn btn-sm grey fw-bold home-btn-content">Download CV <i class="fa fa-download"></i></a>
+            </div>
+            <div class="col-12 col-sm-5 col-md-4 col-lg-4 home-content-image">
+                <img src="assets/images/welcome.png"  alt="welcome" class="content-image">
+            </div>
+            <div class="col-12 col-sm-6 col-md-4 offset-md-2 col-lg-4 offset-lg-2 text-center">
+                <a class="btn btn-lg grey mt-n5" href="#aboutMe"><i class="fa fa-arrow-down-long"></i></a>
             </div>
         </div>
     </div>
+</section>
+<!--    Home-->
 <!--    About Me-->
+<section class="about-section py-5" id="aboutMe">
+    <div class="container">
+        <div class="row g-3 align-items-center about-me-content">
+            <div class="col-12 col-md-6 col-lg-6">
+                <span class="display-5 text-white fw-bolder">About</span>&nbsp;
+                <span class="display-5 text-green-seagreen fw-bolder">me</span>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitur tempus urna at turpis condimentum lobortis... <a class="text-decoration-none text-white fw-bold" href="#aboutMe">Read more</a>
+                </p>
+            </div>
+            <div class="col-12 col-md-6 col-lg-6  about-me-content-image align-middle text-center">
+                <img src="assets/images/about-me.png"  alt="about-me" class="content-image" >
+            </div>
+        </div>
+    </div>
+</section>
+<!--    About Me-->
+<!--    Recent Work-->
+<section class="works-section py-5" id="recentWork">
+    <div class="container">
+        <div class="row g-3 align-items-center recent-work-content">
+            <div class="col-12">
+                <span class="display-5 text-white fw-bolder">My recent</span>&nbsp;
+                <span class="display-5 text-green-seagreen fw-bolder">works</span>
+                <ul class="nav nav-pills recent-work-tabs my-2">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">All</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">UI</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">UX</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Web Design</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="row">
+            <!-- Add your work items here -->
+            <div class="col-md-4 mb-4">
+                <img src="https://via.placeholder.com/300" alt="Work 1" class="img-fluid">
+            </div>
+            <div class="col-md-4 mb-4">
+                <img src="https://via.placeholder.com/300" alt="Work 2" class="img-fluid">
+            </div>
+            <div class="col-md-4 mb-4">
+                <img src="https://via.placeholder.com/300" alt="Work 3" class="img-fluid">
+            </div>
+        </div>
+    </div>
+</section>
+<!--    Recent Work-->
 <!--    Contact-->
-    <div id="contact">
+<section class="contact-section py-5" id="contact">
+    <div class="container">
+        <div class="row contact-content">
+            <div class="col-12 col-md-6 col-lg-6">
+                <h3 class="display-5 text-white fw-bolder">Got a project in</h3>
+                <h3 class="display-5 text-green-seagreen fw-bolder">mind?</h3>
+                <div class="text-center">
+                    <img src="assets/images/contact.png"  alt="contact" class="content-image" >
+                </div>
+                
+            </div>
+            <div class="col-12 col-md-6 col-lg-6">
+                <form class="row g-3">
+                    <div class="col-md-6">
+                        <label for="name" class="form-label">Your Name</label>
+                        <input type="text" class="form-control" id="name" placeholder="Name">
+                    </div>
+                    <div class="col-md-6">
+                        <label for="email" class="form-label">Your Email</label>
+                        <input type="email" class="form-control" id="email" placeholder="Email">
+                    </div>
+                    <div class="col-12">
+                        <label for="message" class="form-label">Your Message</label>
+                        <textarea class="form-control" id="message" rows="7" placeholder="Message"></textarea>
+                    </div>
+                    <div class="col-12">
+                        <button type="submit" class="btn btn-sm green-seagreen fw-bold contact-btn-content">Send Message</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+<!--    Contact-->
+<!--    Footer-->
+<footer class="text-white border-top-1-grey">
+    <div class="container text-center">
+        <ul class="list-inline mb-3 mt-3">
+            <li class="list-inline-item mx-3"><a href="#home" class="text-decoration-none text-white"><i class="fa fa-home"></i> Home</a></li>
+            <li class="list-inline-item mx-3"><a href="#aboutMe" class="text-decoration-none text-white"><i class="fa fa-user"></i> About Me</a></li>
+            <li class="list-inline-item mx-3"><a href="#recentWork" class="text-decoration-none text-white"><i class="fa fa-layer-group"></i> Recent Works</a></li>
+            <li class="list-inline-item mx-3"><a href="#contact" class="text-decoration-none text-white"><i class="fa fa-mobile-alt"></i> Contact</a></li>
+        </ul>
+        <ul class="list-inline mb-3 mt-3 social">
+            <li class="list-inline-item mx-3"><a href="#" class="btn btn-xs rounded-circle grey"><i class="fa-brands fa fa-facebook-f"></i></a></li>
+            <li class="list-inline-item mx-3"><a href="#" class="btn btn-xs rounded-circle grey"><i class="fa-brands fa fa-linkedin-in"></i></a></li>
+            <li class="list-inline-item mx-3"><a href="#" class="btn btn-xs rounded-circle grey"><i class="fa-brands fa fa-twitter"></i></a></li>
+            <li class="list-inline-item mx-3"><a href="#" class="btn btn-xs rounded-circle grey"><i class="fa-brands fa fa-github"></i></a></li>
+        </ul>
+        <div class="text-right mt-3 mb-2">
+            <span>Terms of Service - Privacy Policy</span>
+        </div>
+    </div>
     
-    </div>
-<!--    Contact-->
+</footer>
+<!--    Footer-->
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
             integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
