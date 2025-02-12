@@ -46,6 +46,9 @@ body {
 }
 .menu .nav-item>.nav-link {
     font-size: 14px;
+    &.active, &:hover {
+        font-weight: bolder !important;
+    }
 }
 
 .home-content {
@@ -67,11 +70,11 @@ body {
     width: 100%;
     margin: 10% 20% 5%;
     line-height: 1;
-}
-.home-intro-content>span {
-    font-size: 60px !important;
-    text-transform: uppercase !important;
-    font-weight: bolder !important;
+    &>span {
+        font-size: 60px !important;
+        text-transform: uppercase !important;
+        font-weight: bolder !important;
+    }
 }
 .home-btn-content.btn, .btn.contact-btn-content {
     font-size: 14px !important;
@@ -118,22 +121,22 @@ body {
 #recentWork {
     position: relative;
     z-index: 1;
+    &::before {
+        content: "";
+        background-image: url("../images/about-me-image-bg.png");
+        background-size: 300px;
+        background-repeat: repeat;
+        background-position: center;
+        opacity: 0.5;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+    }
 }
 
-#recentWork::before {
-    content: "";
-    background-image: url("../images/about-me-image-bg.png");
-    background-size: 300px;
-    background-repeat: repeat;
-    background-position: center;
-    opacity: 0.5; /* Adjust the opacity here (0 = fully transparent, 1 = fully opaque) */
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: -1;
-}
 .recent-work-tabs li.nav-item>a.nav-link {
     display: inline-block;
     line-height: 1.5;
@@ -150,10 +153,10 @@ body {
     background-color: #393E46 !important;
     border: 1px solid #393E46 !important;
     color: #EEEEEE !important;
-}
-.recent-work-tabs li.nav-item>a.nav-link.active {
-    background-color: #00ADB5 !important;
-    border: 1px solid #00ADB5 !important;
+    &.active {
+        background-color: #00ADB5 !important;
+        border: 1px solid #00ADB5 !important;
+    }
 }
 .mt-n5 {
     margin-top: -5rem !important;
@@ -164,7 +167,6 @@ body {
 footer {
     font-size: 14px !important;
     line-height: 1.5;
-    /*padding: 30px;*/
 }
 .text-right {
     text-align: right !important;
@@ -187,5 +189,23 @@ footer {
     &:focus {
         background-color: #EEEEEE !important;
         color: #393E46;
+    }
+}
+.recent-work-content .tab-content>.tab-pane .row {
+    min-height: max-content !important;
+    &>div {
+        min-height: fit-content;
+    }
+}
+.recent-work-content .tab-content>.tab-pane .work-item {
+    height: 250px;
+    border: 1px solid #393E46;
+    background-color: #393E4675 !important;
+    border-radius: .5rem;
+    overflow: hidden;
+    & img {
+        max-height: 100%;
+        max-width: 100%;
+        object-fit: contain;
     }
 }

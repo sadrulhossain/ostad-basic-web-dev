@@ -14,7 +14,7 @@
           crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
-<body>
+<body data-bs-spy="scroll" data-bs-target="#menubarNav" data-bs-offset="50">
 <!--Top Bar-->
 <header class="sticky-top py-3 top-bar border-bottom-1-grey">
     <div class="container">
@@ -87,32 +87,118 @@
             <div class="col-12">
                 <span class="display-5 text-white fw-bolder">My recent</span>&nbsp;
                 <span class="display-5 text-green-seagreen fw-bolder">works</span>
-                <ul class="nav nav-pills recent-work-tabs my-2">
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">All</a>
+                <ul class="nav nav-pills recent-work-tabs my-2" role="tablist">
+                    <li class="nav-item" role="presentation">
+                        <a class="nav-link active" id="allTab" data-bs-toggle="tab" data-bs-target="#allWorks" type="button" role="tab" aria-controls="allWorks" aria-selected="true">All</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">UI</a>
+                    <li class="nav-item" role="presentation">
+                        <a class="nav-link" id="uiTab" data-bs-toggle="tab" data-bs-target="#uiWorks" type="button" role="tab" aria-controls="uiWorks" aria-selected="false">UI</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">UX</a>
+                    <li class="nav-item" role="presentation">
+                        <a class="nav-link" id="uxTab" data-bs-toggle="tab" data-bs-target="#uxWorks" type="button" role="tab" aria-controls="uxWorks" aria-selected="false">UX</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Web Design</a>
+                    <li class="nav-item" role="presentation">
+                        <a class="nav-link" id="webDesignTab" data-bs-toggle="tab" data-bs-target="#webDesignWorks" type="button" role="tab" aria-controls="webDesignWorks" aria-selected="false">Wb Design</a>
                     </li>
                 </ul>
-            </div>
-        </div>
-        <div class="row">
-            <!-- Add your work items here -->
-            <div class="col-md-4 mb-4">
-                <img src="https://via.placeholder.com/300" alt="Work 1" class="img-fluid">
-            </div>
-            <div class="col-md-4 mb-4">
-                <img src="https://via.placeholder.com/300" alt="Work 2" class="img-fluid">
-            </div>
-            <div class="col-md-4 mb-4">
-                <img src="https://via.placeholder.com/300" alt="Work 3" class="img-fluid">
+                <div class="tab-content my-5" id="recentWorksTabContent">
+                    <div class="tab-pane fade show active" id="allWorks" role="tabpanel" aria-labelledby="allTab">
+                        <div class="row g-3">
+                            <div class="col-12 col-sm-6 col-md-3 col-lg-3">
+                                <div class="work-item d-flex justify-content-center align-items-center">
+                                    <img alt="work-image" class="img-fluid" src="assets/images/my-work-1.png">
+                                </div>
+                            </div>
+                            <div class="col-12 col-sm-6 col-md-3 col-lg-3">
+                                <div class="work-item d-flex justify-content-center align-items-center">
+                                    <img alt="work-image" class="img-fluid" src="assets/images/my-work-2.png">
+                                </div>
+                            </div>
+                            <div class="col-12 col-sm-6 col-md-3 col-lg-3">
+                                <div class="work-item d-flex justify-content-center align-items-center">
+                                    <img alt="work-image" class="img-fluid" src="assets/images/my-work-3.png">
+                                </div>
+                            </div>
+                            <div class="col-12 col-sm-6 col-md-3 col-lg-3">
+                                <div class="work-item d-flex justify-content-center align-items-center">
+                                    <img alt="work-image" class="img-fluid" src="assets/images/my-work-2.png">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="uiWorks" role="tabpanel" aria-labelledby="uiTab">
+                        <div class="row g-3">
+                            <div class="col-12 col-sm-6 col-md-3 col-lg-3">
+                                <div class="work-item d-flex justify-content-center align-items-center">
+                                    <img alt="work-image" class="img-fluid" src="assets/images/my-work-3.png">
+                                </div>
+                            </div>
+                            <div class="col-12 col-sm-6 col-md-3 col-lg-3">
+                                <div class="work-item d-flex justify-content-center align-items-center">
+                                    <img alt="work-image" class="img-fluid" src="assets/images/my-work-2.png">
+                                </div>
+                            </div>
+                            <div class="col-12 col-sm-6 col-md-3 col-lg-3">
+                                <div class="work-item d-flex justify-content-center align-items-center">
+                                    <img alt="work-image" class="img-fluid" src="assets/images/my-work-1.png">
+                                </div>
+                            </div>
+                            <div class="col-12 col-sm-6 col-md-3 col-lg-3">
+                                <div class="work-item d-flex justify-content-center align-items-center">
+                                    <img alt="work-image" class="img-fluid" src="assets/images/my-work-2.png">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="uxWorks" role="tabpanel" aria-labelledby="uxTab">
+                        <div class="row g-3">
+                            <div class="col-12 col-sm-6 col-md-3 col-lg-3">
+                                <div class="work-item d-flex justify-content-center align-items-center">
+                                    <img alt="work-image" class="img-fluid" src="assets/images/my-work-2.png">
+                                </div>
+                            </div>
+                            <div class="col-12 col-sm-6 col-md-3 col-lg-3">
+                                <div class="work-item d-flex justify-content-center align-items-center">
+                                    <img alt="work-image" class="img-fluid" src="assets/images/my-work-3.png">
+                                </div>
+                            </div>
+                            <div class="col-12 col-sm-6 col-md-3 col-lg-3">
+                                <div class="work-item d-flex justify-content-center align-items-center">
+                                    <img alt="work-image" class="img-fluid" src="assets/images/my-work-1.png">
+                                </div>
+                            </div>
+                            <div class="col-12 col-sm-6 col-md-3 col-lg-3">
+                                <div class="work-item d-flex justify-content-center align-items-center">
+                                    <img alt="work-image" class="img-fluid" src="assets/images/my-work-2.png">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="webDesignWorks" role="tabpanel" aria-labelledby="webDesignTab">
+                        <div class="row g-3">
+                            <div class="col-12 col-sm-6 col-md-3 col-lg-3">
+                                <div class="work-item d-flex justify-content-center align-items-center">
+                                    <img alt="work-image" class="img-fluid" src="assets/images/my-work-1.png">
+                                </div>
+                            </div>
+                            <div class="col-12 col-sm-6 col-md-3 col-lg-3">
+                                <div class="work-item d-flex justify-content-center align-items-center">
+                                    <img alt="work-image" class="img-fluid" src="assets/images/my-work-2.png">
+                                </div>
+                            </div>
+                            <div class="col-12 col-sm-6 col-md-3 col-lg-3">
+                                <div class="work-item d-flex justify-content-center align-items-center">
+                                    <img alt="work-image" class="img-fluid" src="assets/images/my-work-3.png">
+                                </div>
+                            </div>
+                            <div class="col-12 col-sm-6 col-md-3 col-lg-3">
+                                <div class="work-item d-flex justify-content-center align-items-center">
+                                    <img alt="work-image" class="img-fluid" src="assets/images/my-work-1.png">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
