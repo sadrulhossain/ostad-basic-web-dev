@@ -1,24 +1,208 @@
+<!--index.html-->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-          integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
-          crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
-          integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
-          crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="assets/css/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Web Page Using HTML, CSS, Bootstrap</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f8f9fa;
+        }
+        .navbar {
+            margin-bottom: 20px;
+        }
+        .main-content {
+            padding: 20px;
+            background-image: url('https://via.placeholder.com/1500'); /* Replace with your image URL */
+            background-size: cover;
+            color: white;
+            position: relative;
+        }
+        .main-content h2 {
+            text-transform: uppercase;
+            font-weight: bold;
+        }
+        .main-content p {
+            font-size: 1.2em;
+        }
+        .table-custom {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        .table-custom, .table-custom th, .table-custom td {
+            border: 1px solid #ddd;
+            padding: 8px;
+        }
+        .table-custom th {
+            background-color: #4CAF50;
+            color: white;
+        }
+        .btn-custom {
+            margin: 5px;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .btn-custom:hover {
+            opacity: 0.8;
+        }
+        .contact-form {
+            margin-top: 20px;
+        }
+        .contact-form input, .contact-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        .footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 20px;
+        }
+        .footer a {
+            color: #4CAF50;
+            text-decoration: none;
+        }
+        .footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
 </head>
 <body>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-            integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-            crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/js/all.min.js"
-            integrity="sha512-b+nQTCdtTBIRIbraqNEwsjB6UvL3UEMkXnhzd8awtCYh0Kcsjl9uEgwVFVbhoj3uu1DO1ZMacNvLoyJJiNfcvg=="
-            crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="assets/js/custom.js"></script>
+<!-- Navigation Bar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#">MyWebsite</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Blog</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Portfolio</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- Main Content Section -->
+<div class="main-content">
+    <h2>Welcome to My Website</h2>
+    <p>This is a simple webpage designed using HTML, CSS, and Bootstrap. <span style="color: #ffcc00;">Enjoy your stay!</span></p>
+    <select class="form-select" aria-label="Default select example">
+        <option selected>Open this select menu</option>
+        <option value="1">Option 1</option>
+        <option value="2">Option 2</option>
+        <option value="3">Option 3</option>
+    </select>
+    <br>
+    <audio controls>
+        <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+    <br>
+    <video width="320" height="240" controls>
+        <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+    <br>
+    <input type="radio" id="radio1" name="radio" value="Radio 1">
+    <label for="radio1">Radio 1</label>
+    <input type="radio" id="radio2" name="radio" value="Radio 2">
+    <label for="radio2">Radio 2</label>
+    <br>
+    <input type="checkbox" id="checkbox1" name="checkbox1" value="Checkbox 1">
+    <label for="checkbox1"> Checkbox 1</label>
+    <input type="checkbox" id="checkbox2" name="checkbox2" value="Checkbox 2">
+    <label for="checkbox2"> Checkbox 2</label>
+    <hr>
+</div>
+
+<!-- Table -->
+<table class="table-custom">
+    <thead>
+    <tr>
+        <th>#</th>
+        <th>First Name</th>
+        <th>Last Name</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td>1</td>
+        <td>John</td>
+        <td>Doe</td>
+    </tr>
+    <tr>
+        <td>2</td>
+        <td>Jane</td>
+        <td>Smith</td>
+    </tr>
+    <tr>
+        <td>3</td>
+        <td>Mike</td>
+        <td>Johnson</td>
+    </tr>
+    </tbody>
+</table>
+
+<!-- Buttons -->
+<div style="text-align: center; margin-top: 20px;">
+    <button class="btn-custom" style="background-color: #007bff;">Button 1</button>
+    <button class="btn-custom" style="background-color: #28a745;">Button 2</button>
+    <button class="btn-custom" style="background-color: #dc3545;">Button 3</button>
+    <button class="btn-custom" style="background-color: #ffc107;">Button 4</button>
+    <button class="btn-custom" style="background-color: #17a2b8;">Button 5</button>
+    <button class="btn-custom" style="background-color: #6c757d;">Button 6</button>
+    <button class="btn-custom" style="background-color: #343a40;">Button 7</button>
+    <button class="btn-custom" style="background-color: #f8f9fa; color: black;">Button 8</button>
+    <button class="btn-custom" style="background-color: #ffffff; color: black; border: 1px solid #ddd;">Button 9</button>
+    <button class="btn-custom" style="background-color: #000000; color: white;">Button 10</button>
+</div>
+
+<!-- Contact Form -->
+<div class="contact-form">
+    <h2>Contact Us</h2>
+    <form>
+        <input type="text" id="name" name="name" placeholder="Your Name" required>
+        <input type="email" id="email" name="email" placeholder="Your Email" required>
+        <input type="text" id="subject" name="subject" placeholder="Subject" required>
+        <textarea id="message" name="message" placeholder="Your Message" rows="5" required></textarea>
+        <button type="submit" style="background-color: #4CAF50; color: white; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer;">Submit</button>
+    </form>
+</div>
+
+<!-- Footer -->
+<div class="footer">
+    <p>© 2024 Your Name. All rights reserved.</p>
+</div>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
