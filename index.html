@@ -12,36 +12,31 @@
         body {
             font-family: 'Arial', sans-serif;
             background-color: #f8f9fa;
-        }
-        .navbar {
-            margin-bottom: 20px;
+            color: #212529 !important;
         }
         .main-content {
-            padding: 20px;
-            background-image: url('https://via.placeholder.com/1500'); /* Replace with your image URL */
+            background-image: url('https://png.pngtree.com/thumb_back/fh260/background/20201026/pngtree-futuristic-shape-abstract-background-chemistry-technology-concept-for-website-image_438818.jpg'); /* Replace with your image URL */
             background-size: cover;
             color: white;
             position: relative;
-        }
-        .main-content h2 {
-            text-transform: uppercase;
-            font-weight: bold;
-        }
-        .main-content p {
-            font-size: 1.2em;
+            & h2 {
+                text-transform: uppercase;
+                font-weight: bold;
+            }
+            & p {
+                font-size: 1.2em;
+            }
         }
         .table-custom {
-            width: 100%;
             border-collapse: collapse;
-            margin-top: 20px;
-        }
-        .table-custom, .table-custom th, .table-custom td {
-            border: 1px solid #ddd;
-            padding: 8px;
-        }
-        .table-custom th {
-            background-color: #4CAF50;
-            color: white;
+            &, & td, & th {
+                border: 1px solid #dddddd;
+                padding: 8px;
+            }
+            & th {
+                background-color: #4CAF50;
+                color: white;
+            }
         }
         .btn-custom {
             margin: 5px;
@@ -49,42 +44,49 @@
             border: none;
             border-radius: 5px;
             cursor: pointer;
+            color: #FFFFFF;
+            &:hover {
+                opacity: 0.8;
+            }
         }
-        .btn-custom:hover {
-            opacity: 0.8;
-        }
+        
         .contact-form {
             margin-top: 20px;
+            & input, & textarea {
+                width: 100%;
+                padding: 10px;
+                margin: 10px 0;
+                border: 1px solid #dddddd;
+                border-radius: 5px;
+            }
         }
-        .contact-form input, .contact-form textarea {
-            width: 100%;
-            padding: 10px;
-            margin: 10px 0;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-        }
+        
         .footer {
-            background-color: #333;
+            background-color: #333333;
             color: white;
             text-align: center;
             padding: 20px;
             margin-top: 20px;
+            & a {
+                color: #4CAF50;
+                text-decoration: none;
+            }
+            & a:hover {
+                text-decoration: underline;
+            }
         }
-        .footer a {
-            color: #4CAF50;
-            text-decoration: none;
-        }
-        .footer a:hover {
-            text-decoration: underline;
+        
+        .main-content div, .table-custom, .contact-form {
+            width: 70%;
+            margin: 10px auto;
         }
     </style>
 </head>
 <body>
-
 <!-- Navigation Bar -->
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <div class="container-fluid">
-        <a class="navbar-brand" href="#">MyWebsite</a>
+    <div class="container">
+        <a class="navbar-brand fw-bolder fs-4" href="#">Ostad</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -111,88 +113,96 @@
 </nav>
 
 <!-- Main Content Section -->
-<div class="main-content">
-    <h2>Welcome to My Website</h2>
-    <p>This is a simple webpage designed using HTML, CSS, and Bootstrap. <span style="color: #ffcc00;">Enjoy your stay!</span></p>
-    <select class="form-select" aria-label="Default select example">
-        <option selected>Open this select menu</option>
-        <option value="1">Option 1</option>
-        <option value="2">Option 2</option>
-        <option value="3">Option 3</option>
-    </select>
-    <br>
-    <audio controls>
-        <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
-        Your browser does not support the audio element.
-    </audio>
-    <br>
-    <video width="320" height="240" controls>
-        <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
-        Your browser does not support the video tag.
-    </video>
-    <br>
-    <input type="radio" id="radio1" name="radio" value="Radio 1">
-    <label for="radio1">Radio 1</label>
-    <input type="radio" id="radio2" name="radio" value="Radio 2">
-    <label for="radio2">Radio 2</label>
-    <br>
-    <input type="checkbox" id="checkbox1" name="checkbox1" value="Checkbox 1">
-    <label for="checkbox1"> Checkbox 1</label>
-    <input type="checkbox" id="checkbox2" name="checkbox2" value="Checkbox 2">
-    <label for="checkbox2"> Checkbox 2</label>
-    <hr>
-</div>
+<section class="main-content">
+    <div>
+        <h2>Welcome to Ostad</h2>
+        <p>Here, you can find some information about <span style="color: #ffcc00; font-weight: bold;">Ostad.</span></p>
+        <select class="form-select" aria-label="Default select example">
+            <option selected>See the course List</option>
+            <option value="1">PHP+VUE</option>
+            <option value="2">MERN</option>
+            <option value="3">Python</option>
+            <option value="4">Flutter</option>
+        </select>
+        <br>
+        <audio controls>
+            <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+        <br>
+        <video width="600" height="360" controls>
+            <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <br>
+        <input type="radio" id="radio1" name="radio" value="like">
+        <label for="radio1">Like</label>
+        <input type="radio" id="radio2" name="radio" value="dislike">
+        <label for="radio2">Dislike</label>
+        <br>
+        <input type="checkbox" id="checkbox1" name="checkbox1" value="rabbil_hasan">
+        <label for="checkbox1"> Rabbil Hasan</label>
+        <input type="checkbox" id="checkbox2" name="checkbox2" value="hasin_hayder">
+        <label for="checkbox2"> Hasin Hayder</label>
+        <hr>
+    </div>
+</section>
 
 <!-- Table -->
 <table class="table-custom">
     <thead>
     <tr>
         <th>#</th>
-        <th>First Name</th>
-        <th>Last Name</th>
+        <th>Course</th>
+        <th>Instructor</th>
     </tr>
     </thead>
     <tbody>
     <tr>
         <td>1</td>
-        <td>John</td>
-        <td>Doe</td>
+        <td>PHP+VUE</td>
+        <td>Hasin Hayder</td>
     </tr>
     <tr>
         <td>2</td>
-        <td>Jane</td>
-        <td>Smith</td>
+        <td>MERN</td>
+        <td>Rabbil Hasan</td>
     </tr>
     <tr>
-        <td>3</td>
-        <td>Mike</td>
-        <td>Johnson</td>
+        <td>2</td>
+        <td>Flutter</td>
+        <td>Rabbil Hasan</td>
+    </tr>
+    <tr>
+        <td>2</td>
+        <td>Python</td>
+        <td>Rabbil Hasan</td>
     </tr>
     </tbody>
 </table>
 
 <!-- Buttons -->
 <div style="text-align: center; margin-top: 20px;">
-    <button class="btn-custom" style="background-color: #007bff;">Button 1</button>
-    <button class="btn-custom" style="background-color: #28a745;">Button 2</button>
-    <button class="btn-custom" style="background-color: #dc3545;">Button 3</button>
-    <button class="btn-custom" style="background-color: #ffc107;">Button 4</button>
-    <button class="btn-custom" style="background-color: #17a2b8;">Button 5</button>
-    <button class="btn-custom" style="background-color: #6c757d;">Button 6</button>
-    <button class="btn-custom" style="background-color: #343a40;">Button 7</button>
-    <button class="btn-custom" style="background-color: #f8f9fa; color: black;">Button 8</button>
-    <button class="btn-custom" style="background-color: #ffffff; color: black; border: 1px solid #ddd;">Button 9</button>
-    <button class="btn-custom" style="background-color: #000000; color: white;">Button 10</button>
+    <button class="btn-custom" style="background-color: #007bff">View</button>
+    <button class="btn-custom" style="background-color: #28a745">Submit</button>
+    <button class="btn-custom" style="background-color: #dc3545">Delete</button>
+    <button class="btn-custom" style="background-color: #ffc107; color: #000000">Details</button>
+    <button class="btn-custom" style="background-color: #17a2b8">Update</button>
+    <button class="btn-custom" style="background-color: #6c757d">Close</button>
+    <button class="btn-custom" style="background-color: #343a40">Shut down</button>
+    <button class="btn-custom" style="background-color: #f8f9fa; color: #000000;">Blank</button>
+    <button class="btn-custom" style="background-color: #ffffff; color: #000000; border: 1px solid #ddd;">Open</button>
+    <button class="btn-custom" style="background-color: #000000;">Exit</button>
 </div>
 
 <!-- Contact Form -->
 <div class="contact-form">
     <h2>Contact Us</h2>
     <form>
-        <input type="text" id="name" name="name" placeholder="Your Name" required>
-        <input type="email" id="email" name="email" placeholder="Your Email" required>
-        <input type="text" id="subject" name="subject" placeholder="Subject" required>
-        <textarea id="message" name="message" placeholder="Your Message" rows="5" required></textarea>
+        <input type="text" id="name" name="name" placeholder="Name..." required>
+        <input type="email" id="email" name="email" placeholder="Email..." required>
+        <input type="text" id="subject" name="subject" placeholder="Subject..." required>
+        <textarea id="message" name="message" placeholder="Message..." rows="5" required></textarea>
         <button type="submit" style="background-color: #4CAF50; color: white; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer;">Submit</button>
     </form>
 </div>
