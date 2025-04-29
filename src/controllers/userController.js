@@ -1,175 +1,45 @@
-import userModel from '../models/userModel.js'
+import userService from '../services/userService.js'
 
 const userController = {
-    createUser: async (req, res) => {
-        try {
-            const user = await userModel.create(req.body)
-            res.status(201).json({
-                message: 'User created successfully',
-                user
-            })
-        } catch (error) {
-            res.status(500).json({ error: error.message })
-        }
-    },
+    createUser: async (req, res) => await userService.createUser(req, res),
 
-    readUser: (req, res) => {
-        res.json({ message: 'User read successfully' })
-    },
+    readUser: (req, res) => userService.readUser(req, res) ,
 
-    updateUser: async (req, res) => {
-        try {
-            const user = await userModel.update(req.params.id, req.body)
-            res.status(201).json({
-                message: 'User updated successfully',
-                user
-            })
-        } catch (error) {
-            res.status(500).json({ error: error.message })
-        }
-    },
+    updateUser: async (req, res) => await userService.updateUser(req, res),
 
-    deleteUser: async (req, res) => {
-        try {
-            const user = await userModel.delete(req.params.id)
-            res.status(201).json({
-                message: 'User deleted successfully'
-            })
-        } catch (error) {
-            res.status(500).json({ error: error.message })
-        }
-    },
+    deleteUser: async (req, res) => await userService.deleteUser(req, res),
 
-    getAllUsers: async (req, res) => {
-        try {
-            const users = await userModel.findAll()
-            if (!users) return res.status(404).json({ message: 'No user found' });
-            res.json({
-                message: 'All users fetched successfully',
-                users
-            })
-        } catch (error) {
-            res.status(500).json({ error: error.message });
-        }
-        res.json({ message: 'All users fetched successfully' })
-    },
+    getAllUsers: async (req, res) => await userService.getAllUsers(req, res),
 
-    getUserById: async (req, res) => {
-        try {
-            const user = await userModel.findById(req.params.id)
-            if (!user) return res.status(404).json({ message: 'User not found' });
-            res.json({
-                message: 'User fetched by ID',
-                user
-            })
-        } catch (error) {
-            res.status(500).json({ error: error.message });
-        }
-    },
+    getUserById: async (req, res) => await userService.getUserById(req, res),
 
-    loginUser: async (req, res) => {
-        try {
-            const user = await userModel.loginUser(req.params.id)
-            res.json({
-                message: 'User login successful'
-            })
-        } catch (error) {
-            res.status(500).json({ error: error.message });
-        }
-    },
+    loginUser: async (req, res) => await userService.loginUser(req, res),
 
-    logoutUser: async (req, res) => {
-        try {
-            const user = await userModel.logoutUser(req.params.id)
-            res.json({
-                message: 'User logout successful'
-            })
-        } catch (error) {
-            res.status(500).json({ error: error.message });
-        }
-    },
+    logoutUser: async (req, res) => await userService.logoutUser(req, res),
 
-    changePassword: (req, res) => {
-        res.json({ message: 'Password changed successfully' })
-    },
+    changePassword: (req, res) => userService.changePassword(req, res),
 
-    updateProfile: (req, res) => {
-        res.json({ message: 'User profile updated successfully' })
-    },
+    updateProfile: (req, res) => userService.updateProfile(req, res),
 
-    makeAdmin: async (req, res) => {
-        try {
-            const user = await userModel.makeAdmin(req.params.id)
-            res.json({
-                message: 'User made admin successfully'
-            })
-        } catch (error) {
-            res.status(500).json({ error: error.message });
-        }
-    },
+    makeAdmin: async (req, res) => await userService.makeAdmin(req, res),
 
-    removeAdmin: async (req, res) => {
-        try {
-            const user = await userModel.removeAdmin(req.params.id)
-            res.json({
-                message: 'Admin role removed successfully'
-            })
-        } catch (error) {
-            res.status(500).json({ error: error.message });
-        }
-    },
+    removeAdmin: async (req, res) => await userService.removeAdmin(req, res),
 
-    searchUsers: (req, res) => {
-        res.json({ message: 'User search completed successfully' })
-    },
+    searchUsers: (req, res) => userService.searchUsers(req, res),
 
-    filterUsers: (req, res) => {
-        res.json({ message: 'User filter completed successfully' })
-    },
+    filterUsers: (req, res) => userService.filterUsers(req, res),
 
-    blockUser: async (req, res) => {
-        try {
-            const user = await userModel.blockUser(req.params.id)
-            res.json({
-                message: 'User blocked successfully'
-            })
-        } catch (error) {
-            res.status(500).json({ error: error.message });
-        }
-    },
+    blockUser: async (req, res) => await userService.blockUser(req, res),
 
-    unblockUser: async (req, res) => {
-        try {
-            const user = await userModel.unblockUser(req.params.id)
-            res.json({
-                message: 'User unblocked successfully'
-            })
-        } catch (error) {
-            res.status(500).json({ error: error.message });
-        }
-    },
+    unblockUser: async (req, res) => await userService.unblockUser(req, res),
 
-    verifyEmail: (req, res) => {
-        res.json({ message: 'Email verified successfully' })
-    },
+    verifyEmail: (req, res) => userService.verifyEmail(req, res),
 
-    resendVerification: (req, res) => {
-        res.json({ message: 'Verification email resent' })
-    },
+    resendVerification: (req, res) => userService.resendVerification(req, res),
 
-    uploadProfilePicture: (req, res) => {
-        if (!req.file) {
-            return res.status(400).json({ message: 'No file uploaded' })
-        }
-        res.json({
-            message: 'Profile picture uploaded successfully',
-            filePath: `/uploads/${req.file.filename}`
-        })
-    },
+    uploadProfilePicture: (req, res) =>  userService.uploadProfilePicture(req, res),
 
-    deleteAccount: (req, res) => {
-        res.json({ message: 'Account deleted successfully' })
-    }
+    deleteAccount: (req, res) => userService.deleteAccount(req, res)
 }
 
 export default userController
