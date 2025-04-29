@@ -9,6 +9,7 @@ class UserModel {
             email: userData.email,
             isAdmin: userData.isAdmin || false,
             isVerified: userData.isVerified || false,
+            isLoggedIn: userData.isLoggedIn || false,
             isBlocked: userData.isBlocked || false,
             createdAt: userData.createdAt || new Date().toISOString(),
             updatedAt: new Date().toISOString()
@@ -76,6 +77,13 @@ class UserModel {
         return this.update(id, { isAdmin: false })
     }
 
+    async loginUser(id) {
+        return this.update(id, { isLoggedIn: true })
+    }
+
+    async logoutUser(id) {
+        return this.update(id, { isLoggedIn: false })
+    }
     async blockUser(id) {
         return this.update(id, { isBlocked: true })
     }

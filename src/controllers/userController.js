@@ -17,15 +17,40 @@ const userController = {
         res.json({ message: 'User read successfully' })
     },
 
-    updateUser: (req, res) => {
-        res.json({ message: 'User updated successfully' })
+    updateUser: async (req, res) => {
+        try {
+            const user = await userModel.update(req.params.id, req.body)
+            res.status(201).json({
+                message: 'User updated successfully',
+                user
+            })
+        } catch (error) {
+            res.status(500).json({ error: error.message })
+        }
     },
 
-    deleteUser: (req, res) => {
-        res.json({ message: 'User deleted successfully' })
+    deleteUser: async (req, res) => {
+        try {
+            const user = await userModel.delete(req.params.id)
+            res.status(201).json({
+                message: 'User deleted successfully'
+            })
+        } catch (error) {
+            res.status(500).json({ error: error.message })
+        }
     },
 
-    getAllUsers: (req, res) => {
+    getAllUsers: async (req, res) => {
+        try {
+            const users = await userModel.findAll()
+            if (!users) return res.status(404).json({ message: 'No user found' });
+            res.json({
+                message: 'All users fetched successfully',
+                users
+            })
+        } catch (error) {
+            res.status(500).json({ error: error.message });
+        }
         res.json({ message: 'All users fetched successfully' })
     },
 
@@ -42,12 +67,26 @@ const userController = {
         }
     },
 
-    loginUser: (req, res) => {
-        res.json({ message: 'User login successful' })
+    loginUser: async (req, res) => {
+        try {
+            const user = await userModel.loginUser(req.params.id)
+            res.json({
+                message: 'User login successful'
+            })
+        } catch (error) {
+            res.status(500).json({ error: error.message });
+        }
     },
 
-    logoutUser: (req, res) => {
-        res.json({ message: 'User logout successful' })
+    logoutUser: async (req, res) => {
+        try {
+            const user = await userModel.logoutUser(req.params.id)
+            res.json({
+                message: 'User logout successful'
+            })
+        } catch (error) {
+            res.status(500).json({ error: error.message });
+        }
     },
 
     changePassword: (req, res) => {
@@ -58,12 +97,26 @@ const userController = {
         res.json({ message: 'User profile updated successfully' })
     },
 
-    makeAdmin: (req, res) => {
-        res.json({ message: 'User made admin successfully' })
+    makeAdmin: async (req, res) => {
+        try {
+            const user = await userModel.makeAdmin(req.params.id)
+            res.json({
+                message: 'User made admin successfully'
+            })
+        } catch (error) {
+            res.status(500).json({ error: error.message });
+        }
     },
 
-    removeAdmin: (req, res) => {
-        res.json({ message: 'Admin role removed successfully' })
+    removeAdmin: async (req, res) => {
+        try {
+            const user = await userModel.removeAdmin(req.params.id)
+            res.json({
+                message: 'Admin role removed successfully'
+            })
+        } catch (error) {
+            res.status(500).json({ error: error.message });
+        }
     },
 
     searchUsers: (req, res) => {
@@ -74,12 +127,26 @@ const userController = {
         res.json({ message: 'User filter completed successfully' })
     },
 
-    blockUser: (req, res) => {
-        res.json({ message: 'User blocked successfully' })
+    blockUser: async (req, res) => {
+        try {
+            const user = await userModel.blockUser(req.params.id)
+            res.json({
+                message: 'User blocked successfully'
+            })
+        } catch (error) {
+            res.status(500).json({ error: error.message });
+        }
     },
 
-    unblockUser: (req, res) => {
-        res.json({ message: 'User unblocked successfully' })
+    unblockUser: async (req, res) => {
+        try {
+            const user = await userModel.unblockUser(req.params.id)
+            res.json({
+                message: 'User unblocked successfully'
+            })
+        } catch (error) {
+            res.status(500).json({ error: error.message });
+        }
     },
 
     verifyEmail: (req, res) => {
